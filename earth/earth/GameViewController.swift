@@ -41,8 +41,9 @@ class GameViewController: UIViewController {
         scene.rootNode.addChildNode(ambientLightNode)
         
         let earthGeometry = SCNSphere(radius: 5)
-        earthGeometry.firstMaterial?.diffuse.contents = UIColor.green
-        earthGeometry.segmentCount = 12
+        //earthGeometry.firstMaterial?.diffuse.contents = UIColor.green
+        earthGeometry.segmentCount = 32
+        earthGeometry.firstMaterial?.diffuse.contents = UIImage(named:"art.scnassets/topo_1800.png")
         
         let earthNode = SCNNode(geometry: earthGeometry)
         earthNode.position = SCNVector3(x:0, y:0, z:0)
